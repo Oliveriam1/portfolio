@@ -1,22 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap");
 
-html,
-body {
+html, body {
     height: 100%;
     margin: 0;
     font-family: "JetBrains Mono", monospace;
     font-size: 15px;
 }
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: "Mona Sans", sans-serif;
     font-weight: 800;
 }
-main,
-.content {
+main,.content {
     flex: 1;
     background-color: #0f172a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    padding: 100px 40px;
 }
 body {
     display: flex;
@@ -36,20 +37,16 @@ body {
         sans-serif;
 }
 .footer-text {
-    display: flex;
     font-size: 15px;
 }
-.footer-socials {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-}
 #header {
+    position: relative;
     display: flex;
     background-color: #1e293b;
     align-items: center;
     justify-content: center;
     gap: 100px;
+    height: 80px;
 }
 #footer {
     display: flex;
@@ -57,7 +54,47 @@ body {
     align-items: center;
     background-color: #1e293b;
     color: #f8fafc;
+    height: 50px;
+    min-height: 50px;
 }
-.AboutMe {
+.header-socials {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.AboutMe a, .Projects a {
     text-decoration: none;
+    color: #f8fafc;
+}
+.AboutMe a:hover, .Projects a:hover {
+    color: #94a3b8;
+}
+.aboutme-WHOAMI, .aboutme-AG, .aboutme-SKILLS {
+    color: #f8fafc;
+    max-width: 500px;
+    margin-bottom: 60px;
+    line-height: 1.6;
+    border-color: red;
+}
+.aboutme-WHOAMI {
+    align-self: flex-start;
+    color: #f8fafc;
+    padding-bottom: 120px;
+    margin-left: 250px;
+}
+.aboutme-AG {
+    align-self: flex-end;
+    color: #f8fafc;
+    margin-right: 250px;
+}
+.aboutme-SKILLS {
+    color: #f8fafc;
+}
+.clickable-image{
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: auto;
 }

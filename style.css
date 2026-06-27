@@ -81,7 +81,7 @@ body {
 .AboutMe a:hover, .Projects a:hover {
     color: #94a3b8;
 }
-.aboutme-WHOAMI, .aboutme-AG, .aboutme-SKILLS {
+.aboutme-WHOAMI, .aboutme-AG, .aboutme-SKILL {
     color: #f8fafc;
     max-width: 500px;
     margin-bottom: 60px;
@@ -99,8 +99,10 @@ body {
     color: #f8fafc;
     margin-right: 250px;
 }
-.aboutme-SKILLS {
+.aboutme-SKILL {
+    align-self: flex-start;
     color: #f8fafc;
+    margin-left: 250px;
 }
 .clickable-image{
     justify-content: center;

@@ -42,18 +42,42 @@ class AppHeader extends HTMLElement {
             </div>
         </header>
         `;
+      const header = this.querySelector('#header');
+      const content = document.querySelector('.content');
+
+      if (content) {
+        content.addEventListener('scroll', () => {
+          if (content.scrollTop === 0) {
+            header.classList.remove('hidden');
+          } else {
+            header.classList.add('hidden');
+          }
+        });
+      }
     }
 }
 class AppFooter extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `
-      <footer id="footer">
-        <div class="footer-text">
-          &copy; ${new Date().getFullYear()} Oliveriam. All rights reserved.
-        </div>
-      </footer>
-      `;
-  }
+      this.innerHTML = `
+        <footer id="footer" class="hidden">
+          <div class="footer-text">
+            &copy; ${new Date().getFullYear()} Oliveriam. All rights reserved.
+            </div>
+        </footer>
+        `;
+      const footer = this.querySelector('#footer');
+      const content = document.querySelector('.content');
+
+      if (content) {
+        content.addEventListener('scroll', () => {
+          if (content.scrollTop + content.clientHeight >= content.scrollHeight - 2) {
+            footer.classList.remove('hidden');
+          } else {
+            footer.classList.add('hidden');
+          }
+        });
+      }
+    }
 }
 window.customElements.define('app-header', AppHeader)
 window.customElements.define('app-footer', AppFooter)

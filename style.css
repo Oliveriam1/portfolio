@@ -118,14 +118,17 @@ main, .content {
     width: auto;
 }
 @media (max-width: 480px) {
+    body {
+        height: auto !important;
+        overflow: auto !important;
+    }
     #header {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
-        height: auto;
-        padding: 15px 10px;
+        height: 60px !important;
+        gap: 15px !important;
+        padding: 0 10px !important;
+    }
+    #header.hidden {
+        margin-top: -60px !important;
     }
     .header-socials {
         position: static;

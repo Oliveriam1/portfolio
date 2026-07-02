@@ -91,6 +91,12 @@ main, .content {
     color: #94a3b8;
 }
 .aboutme-WHOAMI, .aboutme-AG, .aboutme-SKILL {
+    border: solid;
+    border-radius: 16px;
+    padding: 20px;
+    background-color: black;
+
+
     color: #f8fafc;
     width: 100%;
     max-width: 500px;
